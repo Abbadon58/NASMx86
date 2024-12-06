@@ -26,6 +26,7 @@ Antes de empezar, asegúrate de contar con los siguientes requisitos:
 │   └── interrupciones.asm # Uso de interrupciones en x86
 ├── bin/            # Binarios generados (.bin, .o, .elf)
 └── docs/           # Documentación adicional
+```
 
 ## 📋 como compilar los programas
 
