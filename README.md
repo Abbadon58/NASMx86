@@ -1,45 +1,54 @@
-# calculadora-NASM
-Calculadora NASM i386 x86
-# Crear el contenido del archivo README
-readme_content = """
-# Super Calculadora en Ensamblador
+# Programas en NASM para Arquitectura i386 (x86)
 
-Este proyecto implementa una calculadora interactiva utilizando lenguaje ensamblador. La calculadora incluye un menú principal para realizar operaciones aritméticas y binarias.
+¡Bienvenido a este repositorio! Aquí encontrarás diversos programas escritos en **NASM** (Netwide Assembler) diseñados para ejecutarse en arquitecturas **i386 (x86)**. Estos programas son ideales para aprender ensamblador, explorar conceptos de bajo nivel y experimentar con el funcionamiento interno del hardware.
 
-## Funcionalidades
+---
 
-### Menú Principal
-1. **Operaciones Aritméticas**
-   - Suma
-   - Resta
-   - Multiplicación
-   - División
-2. **Operaciones Binarias**
-   - AND
-   - OR
-   - XOR
-3. **Salir**
+## 📋 Requisitos Previos
 
-### Menú Aritmético
-Permite realizar cálculos básicos seleccionando una de las operaciones disponibles.
+Antes de empezar, asegúrate de contar con los siguientes requisitos:
 
-### Menú Binario
-Permite realizar operaciones binarias entre dos números utilizando operadores lógicos como AND y OR.
+- **NASM**: Instalado en tu sistema para ensamblar los programas.  
+  Puedes descargarlo desde [NASM Official](https://www.nasm.us/).
+- **Emulador o entorno de ejecución**: Opcional, como QEMU o Bochs, para probar los binarios.
+- **Sistema operativo Linux o Windows** con soporte para programas de 32 bits.
 
-## Requisitos
-- Un ensamblador compatible (NASM recomendado).
-- Un entorno de ejecución para programas ensamblados (por ejemplo, DOSBox o un sistema Linux con soporte para ensamblador).
+---
 
-## Cómo Compilar y Ejecutar
-1. Asegúrese de tener NASM instalado en su sistema.
-2. Compile el archivo fuente:
-   ```bash
-   comando para compilarlo:
-   ld -m elf_i386 super_calculadora.o -o super_calculadora
-   ./super_calculadora
+## 📂 Estructura del Repositorio a futuro:
 
-Este programa está diseñado para sistemas de 32 bits. Para sistemas de 64 bits, puede ser necesario configurar un entorno de compatibilidad.
-Asegúrese de proporcionar números válidos como entrada para evitar resultados inesperados.
-Autor
-abbadon58 - Desarrollador del proyecto.
+```plaintext
+├── README.md       # Información del proyecto
+├── src/            # Código fuente en ensamblador NASM
+│   ├── hola_mundo.asm    # Ejemplo básico: "Hola, Mundo"
+│   ├── suma_enteros.asm  # Programa para sumar números enteros
+│   ├── manejo_memoria.asm # Ejemplo de uso de memoria
+│   └── interrupciones.asm # Uso de interrupciones en x86
+├── bin/            # Binarios generados (.bin, .o, .elf)
+└── docs/           # Documentación adicional
+
+## 📋 como compilar los programas
+
+
+git clone https://github.com/tu_usuario/nasm-i386-x86.git
+cd nasm-i386-x86
+
+Ensamblar un Archivo: Para ensamblar un programa, usa el comando:
+
+nasm -f elf32 -o bin/programa.o src/programa.asm
+Enlazar el Binario: En Linux, enlaza el archivo objeto para crear un ejecutable:
+
+
+ld -m elf_i386 -o bin/programa bin/programa.o
+Ejecutar: Ejecuta el programa desde la línea de comandos:
+
+./bin/programa
+
+Contribuciones
+¡Las contribuciones son bienvenidas! Si tienes ideas para nuevos programas o mejoras, abre un issue o envía un pull request.
+
+🛠 Herramientas Utilizadas
+NASM: Ensamblador principal.
+GDB: Depurador para análisis de programas.
+QEMU/Bochs: Emuladores para pruebas.
 
