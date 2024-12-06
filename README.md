@@ -30,20 +30,28 @@ Antes de empezar, asegúrate de contar con los siguientes requisitos:
 
 ## 📋 como compilar los programas
 
-
+como clonar el repositorio comando:
+```
 git clone https://github.com/tu_usuario/nasm-i386-x86.git
 cd nasm-i386-x86
+```
 
 Ensamblar un Archivo: Para ensamblar un programa, usa el comando:
 
+```
 nasm -f elf32 -o bin/programa.o src/programa.asm
+```
+
 Enlazar el Binario: En Linux, enlaza el archivo objeto para crear un ejecutable:
 
-
+```
 ld -m elf_i386 -o bin/programa bin/programa.o
-Ejecutar: Ejecuta el programa desde la línea de comandos:
+```
 
+Ejecutar: Ejecuta el programa desde la línea de comandos:
+```
 ./bin/programa
+```
 
 Contribuciones
 ¡Las contribuciones son bienvenidas! Si tienes ideas para nuevos programas o mejoras, abre un issue o envía un pull request.
